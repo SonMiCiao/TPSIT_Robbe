@@ -1,0 +1,29 @@
+<!ELEMENT classe (cls:nome,composizione_Classe,gruppo_Docenti,media_Voti)>
+<!ELEMENT cls:nome (cls:anno,cls:sezione,cls:indirizzo)>
+<!ATTLIST cls:nome xmlns:cls CDATA #FIXED "scuola/classe">
+<!ELEMENT cls:anno (#PCDATA)>
+<!ELEMENT cls:sezione (#PCDATA)>
+<!ELEMENT cls:indirizzo (#PCDATA)>
+<!ELEMENT composizione_Classe (studente+)>
+<!ELEMENT studente (std:nome,std:cognome,data_Nascita,voti?)>
+<!ELEMENT std:nome (#PCDATA)>
+<!ATTLIST std:nome xmlns:std CDATA #FIXED "scuola/studente">
+<!ELEMENT std:cognome (#PCDATA)>
+<!ATTLIST std:cognome xmlns:std CDATA #FIXED "scuola/studente">
+<!ELEMENT data_Nascita (#PCDATA)>
+<!ELEMENT voti (voto*)>
+<!ELEMENT voto (#PCDATA)>
+<!ATTLIST studente 
+    matricola CDATA #REQUIRED
+    scuola CDATA #FIXED "Silva-Ricci">
+<!ELEMENT gruppo_Docenti (docente+)>
+<!ELEMENT docente (dct:nome,dct:cognome,materia)>
+<!ELEMENT dct:nome (#PCDATA)>
+<!ATTLIST dct:nome xmlns:dct CDATA #FIXED "scuola/docente">
+<!ELEMENT dct:cognome (#PCDATA)>
+<!ATTLIST dct:cognome xmlns:dct CDATA #FIXED "scuola/docente">
+<!ELEMENT materia (#PCDATA)>
+<!ATTLIST docente
+    tipo (teoria|laboratorio) "teoria"
+    seconda_Scuola CDATA #IMPLIED>
+<!ELEMENT media_Voti (#PCDATA)>
