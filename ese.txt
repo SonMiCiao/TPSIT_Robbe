@@ -1,0 +1,46 @@
+I.I.S. “G.Silva – M.Ricci” Legnago (VR) A.S.2023 – 2024
+Verifica di Tecnologie e Progettazione di Sistemi Informatici e Telecomunicazioni
+Classe:
+Cognome e nome:
+Data:
+Gli esercizi proposti sono in ordine crescente di difficoltà. Consegnare
+su Classroom una cartella compressa denominata con il proprio nome e
+cognome.
+1) (2,5pt) Scrivere il DTD per la gestione di una classe.
+• Una Classe contiene:
+● Il Nome della Classe
+○ Anno di tipo cdata
+○ Sezione cdata
+○ Indirizzo di tipo cdata (l’indirizzo è opzionale)
+● Composizione della Classe
+○ Uno o più studenti
+■ Nome di tipo cdata
+■ Cognome di tipo cdata
+■ Data di Nascita di tipo cdata
+■ Zero o più voti di tipo cdata
+■ Un attributo identificativo Matricola obbligatorio
+■ Un attributo scuola con valore fisso “Silva-Ricci”
+
+● Gruppo Docenti:
+○ Uno o più docenti
+■ Nome di tipo cdata
+■ Cognome di tipo cdata
+■ Materia
+■ Un attributo Tipo obbligatorio con opzioni Teoria o Laboratorio
+■ Un attributo opzionale seconda scuola di tipo data
+
+● Media Voti
+
+2) (2,5pt) Si scriva un file XML valido per il DTD progettato contenente
+● 5 Alunni, il primo dovrà avere 3 voti, il secondo 0 voti, il terzo 2 voti, il quarto 2 voti e
+il quinto un voto.
+● 3 Insegnanti, il primo di Teoria senza l’attributo opzionale, il secondo di Teoria e il
+terzo di Laboratorio con attributo opzionale presente
+
+3) (4pt) Utilizzare un Parser SAX per estrarre le seguenti informazioni:
+1. Il cognome di tutti i professori (1.5 pt)
+oppure
+Il Cognome di Tutti i professori di Teoria (2 pt)
+oppure
+Il Nome e il Cognome di tutti i professori di teoria (3 pt)
+2. La media calcolata di tutti i voti di tutti gli studenti (1 pt)
